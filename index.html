@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <script scr="bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+  <meta charset="UTF-8">
+  <title>Voting System</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Voting System</h1>
+    <div class="row">
+      <div class="col-sm-9">
+        <div class="gallery">
+        <div class="card">
+          <img src="images/Person_A.png" class="image_img" id="img_1" onclick="clickImage(0)">
+          <div class="card_overlay" id="overlay_0">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-success" id="btn_00" onclick="voteforPerson(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                </svg>
+              </button>
+              <button type="button" class="btn btn-danger" id="btn_01" onclick="cancelvoting()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                  <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/Person_B.png" class="image_img" id="img_2" onclick="clickImage(1)">
+          <div class="card_overlay" id="overlay_1">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-success" id="btn_10" onclick="voteforPerson(1)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                </svg>
+              </button>
+              <button type="button" class="btn btn-danger" id="btn_11" onclick="cancelvoting()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                  <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/Person_C.png" class="image_img" onclick="clickImage(2)">
+          <div class="card_overlay" id="overlay_2">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-success" id="btn_20" onclick="voteforPerson(2)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                </svg>
+              </button>
+              <button type="button" class="btn btn-danger" id="btn_21" onclick="cancelvoting()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                  <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/Person_D.png" class="image_img" onclick="clickImage(3)">
+          <div class="card_overlay" id="overlay_3">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-success" id="btn_30" onclick="voteforPerson(3)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                </svg>
+              </button>
+              <button type="button" class="btn btn-danger" id="btn_31" onclick="cancelvoting()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                  <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/Person_E.png" class="image_img" onclick="clickImage(4)">
+          <div class="card_overlay" id="overlay_4">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-success" id="btn_40" onclick="voteforPerson(4)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                </svg>
+              </button>
+              <button type="button" class="btn btn-danger" id="btn_41" onclick="cancelvoting()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                  <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/Person_F.png" class="image_img" onclick="clickImage(5)">
+          <div class="card_overlay" id="overlay_5">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-success" id="btn_50" onclick="voteforPerson(5)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                </svg>
+              </button>
+              <button type="button" class="btn btn-danger" id="btn_51" onclick="cancelvoting()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                  <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/Person_G.png" class="image_img" onclick="clickImage(6)">
+          <div class="card_overlay" id="overlay_6">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-success" id="btn_60" onclick="voteforPerson(6)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                </svg>
+              </button>
+              <button type="button" class="btn btn-danger" id="btn_61" onclick="cancelvoting()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                  <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/Person_H.png" class="image_img" onclick="clickImage(7)">
+          <div class="card_overlay" id="overlay_7">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-success" id="btn_70" onclick="voteforPerson(7)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                </svg>
+              </button>
+              <button type="button" class="btn btn-danger" id="btn_71" onclick="cancelvoting()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                  <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="col-sm-3">
+        <button type="button" class="btn btn-primary btn-lg" id="btn_new_initiate" onclick="displayScores()">END</button>
+        <div class="dropdown">
+          <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" disabled>
+            EDIT
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li class="dropdown-item" id="drop_0" onclick="changeUserStatus(0)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-unlock" id="lock_0" viewBox="0 0 16 16">
+                <path id="p_0" d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z"/>
+              </svg>
+              <label>Person_A</label>
+            </li>
+            <li class="dropdown-item" id="drop_1" onclick="changeUserStatus(1)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-unlock" id="lock_1" viewBox="0 0 16 16">
+                <path id="p_1" d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z"/>
+              </svg>
+              <label>Person_B</label>
+            </li>
+            <li class="dropdown-item" id="drop_2" onclick="changeUserStatus(2)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-unlock" id="lock_2" viewBox="0 0 16 16">
+                <path id="p_2" d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z"/>
+              </svg>
+              <label>Person_C</label>
+            </li>
+            <li class="dropdown-item" id="drop_3" onclick="changeUserStatus(3)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-unlock" id="lock_3" viewBox="0 0 16 16">
+                <path id="p_3" d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z"/>
+              </svg>
+              <label>Person_D</label>
+            </li>
+            <li class="dropdown-item" id="drop_4" onclick="changeUserStatus(4)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-unlock" id="lock_4" viewBox="0 0 16 16">
+                <path id="p_4" d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z"/>
+              </svg>
+              <label>Person_E</label>
+            </li>
+            <li class="dropdown-item" id="drop_5" onclick="changeUserStatus(5)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-unlock" id="lock_5" viewBox="0 0 16 16">
+                <path id="p_5" d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z"/>
+              </svg>
+              <label>Person_F</label>
+            </li>
+            <li class="dropdown-item" id="drop_6" onclick="changeUserStatus(6)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-unlock" id="lock_6" viewBox="0 0 16 16">
+                <path id="p_6" d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z"/>
+              </svg>
+              <label>Person_G</label>
+            </li>
+            <li class="dropdown-item" id="drop_7" onclick="changeUserStatus(7)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-unlock" id="lock_7" viewBox="0 0 16 16">
+                <path id="p_7" d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z"/>
+              </svg>
+              <label>Person_H</label>
+            </li>
+          </ul>
+        </div>
+        <br>
+        <br>
+        <table class="table table-hover" id="table">
+          <thead>
+            <tr>
+              <th scope="col">Votes</th>
+              <th scope="col">Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="row_0">
+              <th scope="row" id="rank_0">_</th>
+              <td id="user_0">_</td>
+            </tr>
+            <tr id="row_1">
+              <th scope="row" id="rank_1">_</th>
+              <td id="user_1">_</td>
+            </tr>
+            <tr id="row_2">
+              <th scope="row" id="rank_2">_</th>
+              <td id="user_2">_</td>
+            </tr>
+            <tr id="row_3">
+              <th scope="row" id="rank_3">_</th>
+              <td id="user_3">_</td>
+            </tr>
+            <tr id="row_4">
+              <th scope="row" id="rank_4">_</th>
+              <td id="user_4">_</td>
+            </tr>
+            <tr id="row_5">
+              <th scope="row" id="rank_5">_</th>
+              <td id="user_5">_</td>
+            </tr>
+            <tr id="row_6">
+              <th scope="row" id="rank_6">_</th>
+              <td id="user_6">_</td>
+            </tr>
+            <tr id="row_7">
+              <th scope="row" id="rank_7">_</th>
+              <td id="user_7">_</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script>
+    var scoresIsOn = false;
+    document.getElementById("dropdownMenuButton1").disabled = true;
+    var scores = [0, 0, 0, 0, 0, 0, 0, 0];
+    var users = [
+      "Person_A",
+      "Person_B",
+      "Person_C",
+      "Person_D",
+      "Person_E",
+      "Person_F",
+      "Person_G",
+      "Person_H"
+    ];
+    var inactives = [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ];
+  </script>
+</body>
+</html>
